@@ -33,6 +33,27 @@ function archetype_enqueue_bootstrap() {
 
 add_action( 'wp_enqueue_scripts', 'archetype_enqueue_bootstrap' );
 
+function archetype_enqueue_styles() {
+
+    wp_register_style( 'archetype', get_stylesheet_uri() );
+    wp_enqueue_style( 'archetype' );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'archetype_enqueue_styles' );
+
+// function archetype_enqueue_scripts() {
+
+//     wp_register_script( 'archetype', get_stylesheet_directory_uri().'/functions.js' );
+//     wp_enqueue_script( 'archetype' );
+
+// }
+
+// add_action( 'wp_enqueue_scripts', 'archetype_enqueue_scripts' );
+
+
+/* ------
+
 /* ----------------------------------------------------------- *
  * Theme Support & Registration
  * ----------------------------------------------------------- */
